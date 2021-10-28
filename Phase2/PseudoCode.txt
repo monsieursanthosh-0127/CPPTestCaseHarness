@@ -1,0 +1,89 @@
+
+
+Week 1
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+TestRunner -- Alifa
+
+
+bool RunTests(function *) {
+	TimerObj()
+	ExceptionHandlerObj()
+	setBeginTimer();
+	try{
+		invoke(function *)
+	}
+	catch(Exception E){
+		getCustomizedString(exception,loglevel,function *)
+        
+	}
+	setEndTimer();
+	writeTestResultFile(function*,timerObj,loglevel,exceptionstring);
+	
+}
+
+
+-----------------------------------------------------------------------
+ExceptionHandler  -- Jiawen
+
+string getCustomizedString(exception,loglevel,function *) {
+ string logdetail = "";
+    switch(loglevel = 1){
+	logdetail = "test failed with exception"
+    }case(loglevel > 1){
+	logdetail + exception.getMessage();
+     }case () {
+logdetail + "It failed at "getCuurentTime(); 
+}
+  
+	logdetail + 
+}
+
+-----------------------------------------------------------------------
+Logger  -- Santhosh
+
+writeTestResultFile(function*,timerObj,loglevel,exceptionstring) {
+if(exceptionstring is not empty){
+}else {
+
+}
+}
+
+Timer -- Santhosh
+BeginTime
+EndTime
+TimeTaken
+setBeginTime(){
+beingTime = currentTime
+}
+setEndTime(){
+}
+
+timeTaken(){
+endTime - BeginTime 
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Week 2 
+
+TestHarness  -- Needs Further Discussion
+runTests(list<function*> ,loglevel ){
+timer.startTimer()
+
+try{
+
+	
+	loop(list<function*> ){
+		testRunner.RunTest(function*)	
+            }
+
+}catch(exce){
+callLogger(int loglevel,exception);
+}
+
+	timer.seEndtime()
+}
+logSummarizedResults(testresultCounter);
